@@ -36,7 +36,7 @@ imshow(num_1)
 
 img_pepe = imread(num_1)
 tform = AffineTransform(scale=[num_2,num_3], rotation=num_6, translation=[num_4,num_5])
-img_pepe_tformed = warp(img_pepe, tform.inverse)
+img_pepe_tformed = warp(img_pepe, tform.inverse) #деформация изображения
 fig.add_subplot(2, 2, 2)
 imshow(img_pepe_tformed)
 
