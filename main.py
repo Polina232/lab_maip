@@ -38,7 +38,8 @@ img_pepe = imread(num_1)
 tform = AffineTransform(scale=[num_2,num_3], rotation=num_6, translation=[num_4,num_5])
 img_pepe_tformed = warp(img_pepe, tform.inverse) #деформация изображения
 fig.add_subplot(2, 2, 2)
-imshow(img_pepe_tformed)
+img_pepe_tformed *= 255 # перобразование типа
+imshow(img_pepe_tformed.astype(np.uint8))
 
 hist_red_num_1, bins_red_num_1 = histogram(img_pepe[:, :, 0])
 hist_green_num_1, bins_green_num_1 = histogram(img_pepe[:, :, 1])
